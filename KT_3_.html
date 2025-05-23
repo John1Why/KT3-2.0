@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Товары</h1>
+    <ul><li><button id="games">Игры</button></li>
+        <li id="met-knopka"hidden>
+            <button id="met">Метроидвания</button> 
+            <ul id="spisok" hidden>
+                <li>Dead cells</li>
+                <li>hollow knight</li>
+                <li>ROR remaster</li>
+            </ul>
+        </li>
+        <li id="ctr-knopka" hidden>
+            <button id="ctr">Стратегия</button> 
+            <ul id="list" hidden>
+                <li>Цивилизация 6</li>
+                <li>ages of empire 2</li>
+            </ul>
+        </li>
+        <li id="rpg-knopka" hidden>
+            <button id="rpg">RPG & JRPG</button>
+            <ul id="mass" hidden>
+                <li>metaphor refantazio</li>
+                <li>baldurs gate 3</li>
+                <li>ведьмак 3</li>
+            </ul>
+        </li>
+    </ul>
+</body>
+<script> 
+    function pokazhi(knopka, nevedimka){
+        let OZ = false
+        document.getElementById(knopka).addEventListener("click", function() {
+            if(OZ == false){
+                document.getElementById(nevedimka).hidden = false;
+                OZ = true
+            }else{
+                document.getElementById(nevedimka).hidden = true;
+                OZ = false
+            }
+        }); 
+    }
+pokazhi("games", "met-knopka")
+pokazhi("games", "ctr-knopka")
+pokazhi("games", "rpg-knopka")
+
+pokazhi("met", "spisok")
+pokazhi("ctr", "list")
+pokazhi("rpg", "mass")
+
+</script>
+</html>
+ 
